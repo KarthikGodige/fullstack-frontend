@@ -1,59 +1,51 @@
-
 # Full Stack Product Management App
 
-A full-stack web application built with React, Express.js, and MongoDB. It includes user login, JWT-based authentication, and product CRUD operations connected to a deployed backend.
+A full-stack web application built using React, Node.js, Express, and MongoDB. It provides user login, JWT-based authentication, protected API routes, and product management with CRUD operations.
+
+## Live Demo
+
+**Frontend:** https://fullstack-frontend-one-liart.vercel.app/
+
+**Backend:** https://fullstack-backend-pdks.onrender.com
 
 ## Features
 
-- User login with email and password
-- JWT-based authentication
-- Protected product API routes
-- Create new products
-- View products
-- Update product details
-- Delete products
-- MongoDB database integration
-- React frontend connected to a deployed Express backend
+* User login with email and password
+* JWT-based authentication
+* Protected product API routes
+* Create, read, update, and delete products
+* MongoDB database integration
+* React frontend connected to a deployed backend
+* Responsive application structure
 
 ## Tech Stack
 
-**Frontend**
-- React
-- Vite
-- JavaScript
-- CSS
+**Frontend:** React, Vite, JavaScript, CSS
 
-**Backend**
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JSON Web Tokens (JWT)
-- bcrypt password hashing
+**Backend:** Node.js, Express.js
 
-## Project Structure
+**Database:** MongoDB, Mongoose
 
-```text
-src/
-├── App.jsx
-├── Login.jsx
-├── Login.css
-├── Products.jsx
-├── App.css
-├── index.css
-└── main.jsx
-```
+**Authentication:** JSON Web Token (JWT), bcrypt
+
+**Deployment:** Vercel (frontend), Render (backend)
+
+**Version Control:** Git and GitHub
+
+## Project Architecture
+
+React Frontend → Express REST API → MongoDB Database
+
+The frontend sends HTTP requests to the backend. The backend validates authentication where required and interacts with MongoDB to manage product data.
 
 ## Run Locally
 
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_FRONTEND_REPOSITORY_URL
+git clone https://github.com/KarthikGodige/fullstack-frontend.git
 cd fullstack-frontend
 ```
-
-Replace `YOUR_FRONTEND_REPOSITORY_URL` with your GitHub repository URL.
 
 ### 2. Install dependencies
 
@@ -71,27 +63,33 @@ Open the local URL displayed in your terminal.
 
 ## Backend
 
-The frontend currently communicates with the deployed backend:
+The backend is deployed separately on Render:
 
-`https://fullstack-backend-pdks.onrender.com`
+https://fullstack-backend-pdks.onrender.com
 
-The backend handles authentication, protected routes, and product operations.
+The frontend currently uses this deployed API.
 
 ## Security Notes
 
-- Passwords are hashed by the backend before storage.
-- Protected product routes require a valid JWT.
-- Environment files and secrets must not be committed to GitHub.
-- Never publish database credentials, JWT secrets, or real user passwords.
+* Environment files and secrets should not be committed to GitHub.
+* Protected API endpoints require a valid authentication token.
+* Passwords are hashed using bcrypt on the backend.
+* JWT secrets are configured through backend environment variables.
 
 ## Future Improvements
 
-- Deploy the frontend
-- Add user registration and password recovery UI
-- Improve form validation and error handling
-- Add loading indicators and responsive styling
-- Add automated tests
+* User registration interface
+* Improved product form validation
+* Search, filtering, and pagination
+* Enhanced UI and responsive styling
+* Automated testing
 
 ## Author
 
-Karthik Godige
+**Karthik Godige**
+
+GitHub: https://github.com/KarthikGodige
+
+## License
+
+This project is available for learning and portfolio demonstration. Add a license if you intend to grant others specific reuse rights.
